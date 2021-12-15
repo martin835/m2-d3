@@ -39,7 +39,7 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light  bg-light shadow-lg p-3 mb-0 bg-white rounded">
       <a class="navbar-brand" href="#">
         <img
           src="https://getbootstrap.com/docs/4.6/assets/brand/bootstrap-solid.svg"
@@ -97,11 +97,20 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
             - 3 destinations per row when you are on a tablet (or a smaller window) col-md-
             - 2 destinations per row when you are on a small screen //DOESN'T WORK
         -->
-    
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#deal-week" aria-expanded="false" aria-controls="collapseExample">
-            Show/Hide section
-          </button>
-     <div class="container collapse show" id="deal-week">
+
+    <div class="container">
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-toggle="collapse"
+        data-target="#deal-week"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Show/Hide section
+      </button>
+    </div>
+    <div class="container collapse show shadow-lg p-3 mb-5 bg-white rounded" id="deal-week">
       <h2>Deal of the Week</h2>
       <div class="row">
         <div class="col-6 col-sm-4 col-xl-3">Deal 1</div>
@@ -118,8 +127,21 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
           - 2 destinations per row when you are on a small screen -->
 
     <!--Ex 8) Add to the Welcome Summer destinations section a large shadow-->
+    <div class="container">
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#welcome-summer"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          Show/Hide section
+        </button>
+      </div>
+    
     <div
-      class="container shadow-lg p-3 mb-5 bg-white rounded"
+      class="container collapse show shadow-lg p-3 mb-5 bg-white rounded"
       id="welcome-summer"
     >
       <h2>Welcome Summer</h2>
@@ -139,7 +161,20 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
 
     <!--  Ex 7) Make the "Deal of the day" section disappear on mobile screens -->
 
-    <div class="container d-none d-sm-block" id="day-deal">
+    <div class="container">
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#day-deal"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          Show/Hide section
+        </button>
+      </div>
+    
+    <div class="container d-none d-sm-block collapse show shadow-lg p-3 mb-5 bg-white rounded" id="day-deal">
       <h2>Deal of the day</h2>
       <div class="row">
         <div class="col-8">
@@ -169,7 +204,20 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
       </div>
     </div>
     <!-- Ex 9) Create a section "Last Minute", in which you'll display the pictures of the destinations as Cards -->
-    <div class="container" id="last-minute">
+    <div class="container">
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#last-minute"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          Show/Hide section
+        </button>
+      </div>
+    
+    <div class="container collapse show shadow-lg p-3 mb-5 bg-white rounded" id="last-minute">
       <h2>Last minute</h2>
       <div class="row">
         <div class="col">
@@ -202,39 +250,63 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
       </div>
     </div>
 
- <!--  Ex 10) Create a "Testimonial" section, in which the user can find several feedbacks from fake customers -->
-    <div class="container" id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="row">
-          <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
+    <!--  Ex 10) Create a "Testimonial" section, in which the user can find several feedbacks from fake customers -->
+    <div class="container">
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#testimonials"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          Show/Hide section
+        </button>
+      </div>
+
+    <div class="container collapse show shadow-lg p-3 mb-5 bg-white rounded" id="testimonials">
+      <h2>Testimonials</h2>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    
-     <!--  Ex 11) Create a footer with the company informations and a "Contact Us" button -->
+    </div>
 
-     <footer class="container-fluid text-center my-3 bg-light">
-         <p>Magic Tours inc. <button class="btn btn-secondary">Contact us</button>  </p>
-     </footer>
+    <!--  Ex 11) Create a footer with the company informations and a "Contact Us" button -->
+
+    <footer class="container-fluid text-center text-white bg-dark my-3 bg-light">
+      <p>
+        Magic Tours inc. <button class="btn btn-secondary m-4">Contact us</button>
+      </p>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

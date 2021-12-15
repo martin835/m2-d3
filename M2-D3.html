@@ -37,20 +37,33 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
       crossorigin="anonymous"
     />
 
-    <style>
-        nav a {
-            color: white !important;
-        }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
 
-    
+    <style>
+      nav a {
+        color: white !important;
+      }
+    </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top  shadow-lg p-3 mb-0 rounded">
+    <nav
+      class="
+        navbar navbar-expand-lg navbar-dark
+        bg-dark
+        sticky-top
+        shadow-lg
+        p-3
+        mb-0
+        rounded
+      "
+    >
       <a class="navbar-brand" href="#">
         <img
-          src="https://getbootstrap.com/docs/4.6/assets/brand/bootstrap-solid.svg"
+          src="data:image/png;base64,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"
           width="30"
           height="30"
           alt=""
@@ -92,12 +105,14 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
         </ul>
       </div>
     </nav>
-    
+
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-4">Magic Tours</h1>
-        <p class="lead">Never cease to amaze! Discover <span id="tour-counter"></span> amazing tours we have today!</p>
-        
+        <p class="lead">
+          Never cease to amaze! Discover <span id="tour-counter"></span> amazing
+          tours we have today!
+        </p>
       </div>
     </div>
 
@@ -110,7 +125,7 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
 
     <div class="container">
       <button
-        class="btn btn-primary  mb-2"
+        class="btn btn-primary mb-2"
         type="button"
         data-toggle="collapse"
         data-target="#deal-week"
@@ -120,75 +135,104 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
         Show/Hide section
       </button>
     </div>
-    <div class="container mt-n3  collapse show shadow-lg p-3 mb-5 bg-white rounded" id="deal-week">
+    <div
+      class="container mt-n3 collapse show shadow-lg p-3 mb-5 bg-white rounded"
+      id="deal-week"
+    >
       <h2>Deal of the Week</h2>
-      <div class="row ">
-        
-            <div class="col-6 col-sm-4 col-xl-3">
-                <div class="card travel">
-                    <img src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">South Pole</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">15.12.2021 - 22.12.2021</li>
-                      <li class="list-group-item">1200 EUR</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Book today</a>
-                    </div>
-                  </div>
+      <div class="row">
+        <div class="col-6 col-sm-4 col-xl-3">
+          <div class="card travel">
+            <img
+              src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">South Pole</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
             </div>
-            <div class="col-6 col-sm-4 col-xl-3">
-                <div class="card travel">
-                    <img src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">South Pole</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">15.12.2021 - 22.12.2021</li>
-                      <li class="list-group-item">1200 EUR</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Book today</a>
-                    </div>
-                  </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">15.12.2021 - 22.12.2021</li>
+              <li class="list-group-item">1200 EUR</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Book today</a>
             </div>
-            <div class="col-6 col-sm-4 col-xl-3">
-                <div class="card travel">
-                    <img src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">South Pole</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">15.12.2021 - 22.12.2021</li>
-                      <li class="list-group-item">1200 EUR</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Book today</a>
-                    </div>
-                  </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-xl-3">
+          <div class="card travel">
+            <img
+              src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">South Pole</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
             </div>
-            <div class="col-6 col-sm-4 col-xl-3">
-                <div class="card travel">
-                    <img src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">South Pole</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">15.12.2021 - 22.12.2021</li>
-                      <li class="list-group-item">1200 EUR</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Book today</a>
-                    </div>
-                  </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">15.12.2021 - 22.12.2021</li>
+              <li class="list-group-item">1200 EUR</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Book today</a>
             </div>
-        
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-xl-3">
+          <div class="card travel">
+            <img
+              src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">South Pole</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">15.12.2021 - 22.12.2021</li>
+              <li class="list-group-item">1200 EUR</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Book today</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-xl-3">
+          <div class="card travel">
+            <img
+              src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">South Pole</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">15.12.2021 - 22.12.2021</li>
+              <li class="list-group-item">1200 EUR</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Book today</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -200,18 +244,18 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
 
     <!--Ex 8) Add to the Welcome Summer destinations section a large shadow-->
     <div class="container">
-        <button
-          class="btn btn-primary mb-2"
-          type="button"
-          data-toggle="collapse"
-          data-target="#welcome-summer"
-          aria-expanded="false"
-          aria-controls="collapseExample"
-        >
-          Show/Hide section
-        </button>
-      </div>
-    
+      <button
+        class="btn btn-primary mb-2"
+        type="button"
+        data-toggle="collapse"
+        data-target="#welcome-summer"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Show/Hide section
+      </button>
+    </div>
+
     <div
       class="container mt-n3 collapse show shadow-lg p-3 mb-5 bg-white rounded"
       id="welcome-summer"
@@ -219,100 +263,142 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
       <h2>Welcome Summer</h2>
       <div class="row">
         <div class="col-6 col-sm-4 col-xl-2">
-            <div class="card travel">
-                    <img src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">South Pole</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">15.12.2021 - 22.12.2021</li>
-                      <li class="list-group-item">1200 EUR</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Book today</a>
-                    </div>
-                  </div>
+          <div class="card travel">
+            <img
+              src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">South Pole</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">15.12.2021 - 22.12.2021</li>
+              <li class="list-group-item">1200 EUR</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Book today</a>
+            </div>
+          </div>
         </div>
         <div class="col-6 col-sm-4 col-xl-2">
-            <div class="card travel">
-                    <img src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">South Pole</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">15.12.2021 - 22.12.2021</li>
-                      <li class="list-group-item">1200 EUR</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Book today</a>
-                    </div>
-                  </div>
+          <div class="card travel">
+            <img
+              src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">South Pole</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">15.12.2021 - 22.12.2021</li>
+              <li class="list-group-item">1200 EUR</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Book today</a>
+            </div>
+          </div>
         </div>
         <div class="col-6 col-sm-4 col-xl-2">
-            <div class="card travel">
-                    <img src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">South Pole</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">15.12.2021 - 22.12.2021</li>
-                      <li class="list-group-item">1200 EUR</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Book today</a>
-                    </div>
-                  </div>
+          <div class="card travel">
+            <img
+              src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">South Pole</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">15.12.2021 - 22.12.2021</li>
+              <li class="list-group-item">1200 EUR</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Book today</a>
+            </div>
+          </div>
         </div>
         <div class="col-6 col-sm-4 col-xl-2">
-            <div class="card travel">
-                    <img src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">South Pole</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">15.12.2021 - 22.12.2021</li>
-                      <li class="list-group-item">1200 EUR</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Book today</a>
-                    </div>
-                  </div>
+          <div class="card travel">
+            <img
+              src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">South Pole</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">15.12.2021 - 22.12.2021</li>
+              <li class="list-group-item">1200 EUR</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Book today</a>
+            </div>
+          </div>
         </div>
         <div class="col-6 col-sm-4 col-xl-2">
-            <div class="card travel">
-                    <img src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">South Pole</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">15.12.2021 - 22.12.2021</li>
-                      <li class="list-group-item">1200 EUR</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Book today</a>
-                    </div>
-                  </div>
+          <div class="card travel">
+            <img
+              src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">South Pole</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">15.12.2021 - 22.12.2021</li>
+              <li class="list-group-item">1200 EUR</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Book today</a>
+            </div>
+          </div>
         </div>
         <div class="col-6 col-sm-4 col-xl-2">
-            <div class="card travel">
-                    <img src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">South Pole</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">15.12.2021 - 22.12.2021</li>
-                      <li class="list-group-item">1200 EUR</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Book today</a>
-                    </div>
-                  </div>
+          <div class="card travel">
+            <img
+              src="https://1001freedownloads.s3.amazonaws.com/vector/413996/preview/wm_summer3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">South Pole</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">15.12.2021 - 22.12.2021</li>
+              <li class="list-group-item">1200 EUR</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Book today</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -324,63 +410,78 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
     <!--  Ex 7) Make the "Deal of the day" section disappear on mobile screens -->
 
     <div class="container d-none d-sm-block">
-        <button
-          class="btn btn-primary mb-2"
-          type="button"
-          data-toggle="collapse"
-          data-target="#day-deal-wrapper"
-          aria-expanded="false"
-          aria-controls="collapseExample"
-        >
-          Show/Hide section
-        </button>
-      </div>
+      <button
+        class="btn btn-primary mb-2"
+        type="button"
+        data-toggle="collapse"
+        data-target="#day-deal-wrapper"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Show/Hide section
+      </button>
+    </div>
     <div class="collapse show" id="day-deal-wrapper">
-        <div class="container mt-n3 d-none d-sm-block shadow-lg p-3 mb-5 bg-white rounded" id="day-deal">
+      <div
+        class="
+          container
+          mt-n3
+          d-none d-sm-block
+          shadow-lg
+          p-3
+          mb-5
+          bg-white
+          rounded
+        "
+        id="day-deal"
+      >
         <h2>Deal of the day</h2>
         <div class="row">
-            <div class="col-8">
+          <div class="col-8">
             <img
-                src="https://images.unsplash.com/photo-1472108653939-927cd6aba6d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                class="img-fluid"
+              src="https://images.unsplash.com/photo-1472108653939-927cd6aba6d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              class="img-fluid"
             />
-            </div>
-            <div class="col-4">
+          </div>
+          <div class="col-4">
             <div class="card">
-                <div class="card-body">
+              <div class="card-body">
                 <h5 class="card-title">Israel beaches</h5>
                 <p class="card-text">
-                    See all the most beautiful beaches of the Holy Land - from the
-                    Mediterranean Sea, via Dead Sea to Red Sea
+                  See all the most beautiful beaches of the Holy Land - from the
+                  Mediterranean Sea, via Dead Sea to Red Sea
                 </p>
-                </div>
-                <ul class="list-group list-group-flush">
+              </div>
+              <ul class="list-group list-group-flush">
                 <li class="list-group-item">11.02.2022 -25.02.2022</li>
                 <li class="list-group-item">1000 USD</li>
-                </ul>
-                <div class="card-body">
+              </ul>
+              <div class="card-body">
                 <a href="#" class="card-link">Buy here</a>
-                </div>
+              </div>
             </div>
-            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
     <!-- Ex 9) Create a section "Last Minute", in which you'll display the pictures of the destinations as Cards -->
     <div class="container">
-        <button
-          class="btn btn-primary mb-2"
-          type="button"
-          data-toggle="collapse"
-          data-target="#last-minute"
-          aria-expanded="false"
-          aria-controls="collapseExample"
-        >
-          Show/Hide section
-        </button>
-      </div>
-    
-    <div class="container mt-n3 collapse show shadow-lg p-3 mb-5 bg-white rounded" id="last-minute">
+      <button
+        class="btn btn-primary mb-2"
+        type="button"
+        data-toggle="collapse"
+        data-target="#last-minute"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Show/Hide section
+      </button>
+    </div>
+
+    <div
+      class="container mt-n3 collapse show shadow-lg p-3 mb-5 bg-white rounded"
+      id="last-minute"
+    >
       <h2>Last minute</h2>
       <div class="row">
         <div class="col">
@@ -415,66 +516,123 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
 
     <!--  Ex 10) Create a "Testimonial" section, in which the user can find several feedbacks from fake customers -->
     <div class="container">
-        <button
-          class="btn btn-primary mb-2"
-          type="button"
-          data-toggle="collapse"
-          data-target="#testimonials"
-          aria-expanded="false"
-          aria-controls="collapseExample"
-        >
-          Show/Hide section
-        </button>
-      </div>
+      <button
+        class="btn btn-primary mb-2"
+        type="button"
+        data-toggle="collapse"
+        data-target="#testimonials"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Show/Hide section
+      </button>
+    </div>
 
-    <div class="container mt-n3 collapse show shadow-lg p-3 mb-5 bg-white rounded" id="testimonials">
+    <div
+      class="container mt-n3 collapse show shadow-lg p-3 mb-5 bg-white rounded"
+      id="testimonials"
+    >
       <h2>Testimonials</h2>
       <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
+           <!--Grid column-->
+    <div class="col-md-4 mb-md-0 mb-5">    
+        <!-- Example from here https://mdbootstrap.com/docs/b4/jquery/sections/testimonials/ -->
+        <div class="testimonial">
+          <!--Avatar-->
+          <div class="avatar mx-auto">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" class="rounded-circle z-depth-1 img-fluid">
+          </div>
+          <!--Content-->
+          <h4 class="font-weight-bold dark-grey-text mt-4">Anna Deynah</h4>
+          <h6 class="font-weight-bold blue-text my-3">Web Designer</h6>
+          <p class="font-weight-normal dark-grey-text">
+            <i class="fas fa-quote-left pr-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+            eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
+          <!--Review-->
+          <div class="orange-text">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
+  
+      </div>
+      <!--Grid column-->
+  
+      <!--Grid column-->
+      <div class="col-md-4 mb-md-0 mb-5">
+  
+        <div class="testimonial">
+          <!--Avatar-->
+          <div class="avatar mx-auto">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg" class="rounded-circle z-depth-1 img-fluid">
+          </div>
+          <!--Content-->
+          <h4 class="font-weight-bold dark-grey-text mt-4">John Doe</h4>
+          <h6 class="font-weight-bold blue-text my-3">Web Developer</h6>
+          <p class="font-weight-normal dark-grey-text">
+            <i class="fas fa-quote-left pr-2"></i>Ut enim ad minima veniam, quis nostrum exercitationem ullam
+            corporis suscipit laboriosam, nisi ut aliquid commodi.</p>
+          <!--Review-->
+          <div class="orange-text">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
+  
+      </div>
+      <!--Grid column-->
+  
+      <!--Grid column-->
+      <div class="col-md-4">
+  
+        <div class="testimonial">
+          <!--Avatar-->
+          <div class="avatar mx-auto">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle z-depth-1 img-fluid">
+          </div>
+          <!--Content-->
+          <h4 class="font-weight-bold dark-grey-text mt-4">Maria Kate</h4>
+          <h6 class="font-weight-bold blue-text my-3">Photographer</h6>
+          <p class="font-weight-normal dark-grey-text">
+            <i class="fas fa-quote-left pr-2"></i>At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+          <!--Review-->
+          <div class="orange-text">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
           </div>
         </div>
+  
+      </div>
+      <!--Grid column-->
+       
       </div>
     </div>
 
     <!--  Ex 11) Create a footer with the company informations and a "Contact Us" button -->
 
-    <footer class="container-fluid text-center text-white bg-dark my-3 bg-light">
+    <footer
+      class="container-fluid text-center text-white bg-dark my-3 bg-light"
+    >
       <p>
-        Magic Tours inc. <button class="btn btn-secondary m-4">Contact us</button>
+        Magic Tours inc.
+        <button class="btn btn-secondary m-4">Contact us</button>
       </p>
     </footer>
 
     <script>
-        let travels = document.getElementsByClassName('travel')
-        let counterParent = document.getElementById('tour-counter')
-        counterParent.innerText = travels.length
+      let travels = document.getElementsByClassName("travel");
+      let counterParent = document.getElementById("tour-counter");
+      counterParent.innerText = travels.length;
     </script>
 
     <script

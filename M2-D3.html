@@ -1,57 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- MANDATORY JS EXERCISES (continue from yesterday's file for this exercise)
-    1) Create two inputs for picking up colors in the page, and a button with "Apply Colors" as text
-    2) Grab all <li> in the page from the DOM, and save them in a variable called "listItems"
-    3) Grab the inputs references via DOM manipulation and save them in variables
-    4) Create a function and attach it to the "Apply Colors" button click event
-    5) Cycle listItems inside the function. Verify that the function and the loop work by logging in the console 
-        each item from the loop every time the button gets clicked
-    6) Move the inputs references in the function. Use the first input value as background-color for the item, and the second one for the text color.
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    If you receive black as a color check where you have the inputs references.
-    You should now see the list-items color and background-color change at the click of the button.
--->
-
-<head>
-    <!-- M2-D3 ASSIGNMENT RULES
-        - This challenge should be done in pairs, go in Eduflow to find who you are paired with
-        - Implement one exercise each, switching side from driver and navigator frequently
-        - We suggest you to use Zoom or Google Hangouts to speak and look at each other throughout the whole activity
-
-        - The exercise must be pushed to the repository and linked on EduFlow by the end of the day
-        - You can google / use StackOverflow BUT we suggest you to use just the material provided
-        - To test the page, open it with your browser and use the inspector.
-        - Use Bootstrap4.6 classes to arrange the page layout and components.
-        - Use containers, rows and cols in order to have a working responsive layout.
-
-
+    <!-- 
         EXERCISE: 
         You are creating a website for a Travel Agency.
         In thins page you will add destinations of places you're dreaming to go to in the near future!
-
-
-        Ex 1) Implement a navigation bar. Connected to all the sections of the page to the menu items. 
-        Ex 2) Add a logo into the navigation bar (can be any image)
-        Ex 3) Add a Jumbotron section with the name and the claim of the tour operator agency
-        Ex 4) Implement the "Deal of the Week" section. In this section you'll display 4 destinations.
-         In this section you should have:
-            - 4 destinations per row when the screen is very large
-            - 3 destinations per row when you are on a tablet (or a smaller window)
-            - 2 destinations per row when you are on a small screen
-
-        Ex 5) Implement the "Welcome Summer" section. In this section you'll propose 6 destinations to your user
-            In this section you should have:
-                - 6 destinations per row when the screen is very large
-                - 3 destinations per row when you are on a tablet (or a smaller window)
-                - 2 destinations per row when you are on a small screen
+       
         
-        Ex 6) Implement a "Deal of the day" section. In this section you'll have:
-            - 66% of the page with a picture of the destination
-            - 33% with Name, dates, price and a short description
-
-        Ex 7) Make the "Deal of the day" section disappear on mobile screens
-        Ex 8) Add to the Welcome Summer destinations section a large shadow
         Ex 9) Create a section "Last Minute", in which you'll display the pictures of the destinations as Cards
         Ex 10) Create a "Testimonial" section, in which the user can find several feedbacks from fake customers
         Ex 11) Create a footer with the company informations and a "Contact Us" button
@@ -63,11 +24,226 @@
         Ex 15) Create a function that adds a "HOT" badge to all the "Welcome Summer" offers
         Ex 16) Create a function to delete all "cards" from the page
       -->
-</head>
 
-<body>
+    <!--
+Ex 1) Implement a navigation bar. Connected to all the sections of the page to the menu items. 
+Ex 2) Add a logo into the navigation bar (can be any image) 
+Ex 3) Add a Jumbotron section with the name and the claim of the tour operator agency 
+-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+  </head>
 
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://getbootstrap.com/docs/4.6/assets/brand/bootstrap-solid.svg"
+          width="30"
+          height="30"
+          alt=""
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#deal-week">Deal of the weak</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#welcome-summer">Welcome summer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#day-deal">Deal of the day</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#last-minute">Last minute</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Magic Tours</h1>
+        <p class="lead">Never cease to amaze!</p>
+      </div>
+    </div>
 
-</body>
+    <!--Ex 4) Implement the "Deal of the Week" section. In this section you'll display 4 destinations.
+         In this section you should have:
+            - 4 destinations per row when the screen is very large col-xl 
+            - 3 destinations per row when you are on a tablet (or a smaller window) col-md-
+            - 2 destinations per row when you are on a small screen //DOESN'T WORK
+        -->
+    
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#deal-week" aria-expanded="false" aria-controls="collapseExample">
+            Show/Hide section
+          </button>
+     <div class="container collapse show" id="deal-week">
+      <h2>Deal of the Week</h2>
+      <div class="row">
+        <div class="col-6 col-sm-4 col-xl-3">Deal 1</div>
+        <div class="col-6 col-sm-4 col-xl-3">Deal 2</div>
+        <div class="col-6 col-sm-4 col-xl-3">Deal 3</div>
+        <div class="col-6 col-sm-4 col-xl-3">Deal 4</div>
+      </div>
+    </div>
 
+    <!-- Ex 5) Implement the "Welcome Summer" section. In this section you'll propose 6 destinations to your user
+      In this section you should have:
+          - 6 destinations per row when the screen is very large
+          - 3 destinations per row when you are on a tablet (or a smaller window)
+          - 2 destinations per row when you are on a small screen -->
+
+    <!--Ex 8) Add to the Welcome Summer destinations section a large shadow-->
+    <div
+      class="container shadow-lg p-3 mb-5 bg-white rounded"
+      id="welcome-summer"
+    >
+      <h2>Welcome Summer</h2>
+      <div class="row">
+        <div class="col-6 col-sm-4 col-xl-2">Destination 1</div>
+        <div class="col-6 col-sm-4 col-xl-2">Destination 2</div>
+        <div class="col-6 col-sm-4 col-xl-2">Destination 3</div>
+        <div class="col-6 col-sm-4 col-xl-2">Destination 4</div>
+        <div class="col-6 col-sm-4 col-xl-2">Destination 5</div>
+        <div class="col-6 col-sm-4 col-xl-2">Destination 5</div>
+      </div>
+    </div>
+
+    <!--Ex 6) Implement a "Deal of the day" section. In this section you'll have:
+    - 66% of the page with a picture of the destination
+    - 33% with Name, dates, price and a short description-->
+
+    <!--  Ex 7) Make the "Deal of the day" section disappear on mobile screens -->
+
+    <div class="container d-none d-sm-block" id="day-deal">
+      <h2>Deal of the day</h2>
+      <div class="row">
+        <div class="col-8">
+          <img
+            src="https://images.unsplash.com/photo-1472108653939-927cd6aba6d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Israel beaches</h5>
+              <p class="card-text">
+                See all the most beautiful beaches of the Holy Land - from the
+                Mediterranean Sea, via Dead Sea to Red Sea
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">11.02.2022 -25.02.2022</li>
+              <li class="list-group-item">1000 USD</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Buy here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ex 9) Create a section "Last Minute", in which you'll display the pictures of the destinations as Cards -->
+    <div class="container" id="last-minute">
+      <h2>Last minute</h2>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1472108653939-927cd6aba6d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1472108653939-927cd6aba6d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1472108653939-927cd6aba6d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <!--  Ex 10) Create a "Testimonial" section, in which the user can find several feedbacks from fake customers -->
+    <div class="container" id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+     <!--  Ex 11) Create a footer with the company informations and a "Contact Us" button -->
+
+     <footer class="container-fluid text-center my-3 bg-light">
+         <p>Magic Tours inc. <button class="btn btn-secondary">Contact us</button>  </p>
+     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

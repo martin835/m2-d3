@@ -270,7 +270,7 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">South Pole</h5>
+              <h5 class="card-title">South Pole </h5>
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
@@ -662,6 +662,21 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
       let travels = document.getElementsByClassName("travel");
       let counterParent = document.getElementById("tour-counter");
       counterParent.innerText = travels.length;
+      
+
+      const addHotBagdeToWelcomeSummer = function () {
+          
+        let welcomeSummerCardsNode = document.querySelectorAll('#welcome-summer .card-title')
+            for (i=0; i < welcomeSummerCardsNode.length; i++) {
+            welcomeSummerCardsNode[i].innerHTML = 'South Pole <span class="badge badge-warning">HOT OFFER</span>'
+        }
+    }
+
+      
+
+      /* <span class="badge badge-warning">HOT OFFER</span> */
+
+      
     </script>
 
     <script

@@ -659,9 +659,14 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
       </div>
 
     <script>
-      let travels = document.getElementsByClassName("travel");
+
+      const travelCounter = function () {
+        let travels = document.getElementsByClassName("travel");
       let counterParent = document.getElementById("tour-counter");
       counterParent.innerText = travels.length;
+      }
+
+      travelCounter()
 
       /* Ex 15) Create a function that adds a "HOT" badge to all the "Welcome Summer" offers */
       const addHotBagdeToWelcomeSummer = function () {
@@ -682,6 +687,7 @@ Ex 3) Add a Jumbotron section with the name and the claim of the tour operator a
 
       for (i=0; i < allCardsNode.length; i++) {
           allCardsNode[i].remove()
+          travelCounter()
       }
       }
 
